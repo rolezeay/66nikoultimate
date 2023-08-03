@@ -1258,6 +1258,860 @@ Tab:AddButton({
         loadstring(game:HttpGet("https://raw.githubusercontent.com/tickwares/tickware/main/Tickware"))()
   	end    
 })
+local Section = Tab:AddSection({
+	Name = "T-Titans Battlegrounds"
+})
+Tab:AddButton({
+	Name = "T-Titans Battlegrounds Gui",
+	Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/ToraIsMe/ToraIsMe/main/0ttitan", true))()
+
+        game.StarterGui:SetCore("SendNotification", {
+            Title = "Subscribe To xMiles_Games";
+            Text = "Subscribe For More Scripts"; -- what the text says (ofc)
+            Duration = 60;
+        })
+        
+        local ScreenGui = Instance.new("ScreenGui")
+        local main = Instance.new("Frame")
+        local label = Instance.new("TextLabel")
+        local Hitbox = 
+        Instance.new("TextButton")
+        
+        ScreenGui.Parent = game.CoreGui
+        
+        main.Name = "main"
+        main.Parent = ScreenGui
+        main.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+        main.Position = UDim2.new(0.40427351, 0, 0.34591195, 0)
+        main.Size = UDim2.new(0, 100, 0, 100)
+        main.Active = true
+        main.Draggable = true
+        
+        label.Name = "label"
+        label.Parent = main
+        label.BackgroundColor3 = Color3.fromRGB(139,0,0)
+        label.Size = UDim2.new(0, 100, 0, 20)
+        label.Font = Enum.Font.SourceSans
+        label.Text = "Teen Titan GUI"
+        label.TextColor3 = Color3.fromRGB(0, 0, 0)
+        label.TextScaled = true
+        label.TextSize = 5.000
+        label.TextWrapped = true
+        
+        Hitbox.Name = "Hit box"
+        Hitbox.Parent = main
+        Hitbox.BackgroundColor3 = Color3.fromRGB(0, 0, 255)
+        Hitbox.Position = UDim2.new(0.114285722, 0, 0.372448981, 0)
+        Hitbox.Size = UDim2.new(0, 90, 0, 40)
+        Hitbox.Font = Enum.Font.SourceSans
+        Hitbox.Text = "Hit box"
+        Hitbox.TextColor3 = Color3.fromRGB(0, 0, 0)
+        Hitbox.TextSize = 40.000
+        Hitbox.MouseButton1Down:connect(function()
+            _G.HeadSize = 20
+        
+            _G.Disabled = true
+        
+        
+        game:GetService('RunService').RenderStepped:connect(function()
+                if _G.Disabled then
+                    for i,v in next, game:GetService('Players'):GetPlayers() do
+                        if v.Name ~= game:GetService('Players').LocalPlayer.Name then
+                            pcall(function()
+                                v.Character.HumanoidRootPart.Size = Vector3.new(_G.HeadSize,_G.HeadSize,_G.HeadSize)
+                                v.Character.HumanoidRootPart.Transparency = 0.7
+                                v.Character.HumanoidRootPart.BrickColor = BrickColor.new("Really black")
+                                v.Character.HumanoidRootPart.Material = "Neon"
+                                v.Character.HumanoidRootPart.CanCollide = false
+                            end)
+                        end
+                    end
+                end
+            end)
+        end)
+  	end    
+})
+local Tab = Window:MakeTab({
+	Name = "Games 2",
+	Icon = "rbxassetid://7733799901",
+	PremiumOnly = false
+})
+local Section = Tab:AddSection({
+	Name = "Game Scripts 2"
+})
+Tab:AddButton({
+	Name = "Ability Wars",
+	Callback = function()
+        loadstring(game:HttpGet("https://paste.ee/r/Wo5Kj"))()
+  	end    
+})
+Tab:AddButton({
+	Name = "Anime Clicker Fight",
+	Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/XRoLLu/Rolly_Hub/main/open-source-trash-loader.exe.yeah"))() 
+  	end    
+})
+Tab:AddButton({
+	Name = "Anime Fighters Simulator",
+	Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/destylol/masterhubv311/itachi/Main.lua"))()
+  	end    
+})
+Tab:AddButton({
+	Name = "Anime Fighters Simulator #2",
+	Callback = function()
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/TheAbsolutionism/AbsolutionismHub/main/HubExecutor',true))()
+  	end    
+})
+Tab:AddButton({
+	Name = "Anime Legends Simulator",
+	Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Amenteshades/alsscript/main/animelegendsim.lua", true))()
+  	end    
+})
+Tab:AddButton({
+	Name = "Anime Racing Clicker",
+	Callback = function()
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/13B8B/NEXUS/main/loadstring'))()
+  	end    
+})
+Tab:AddButton({
+	Name = "Arcane Lineage",
+	Callback = function()
+        loadstring(game:HttpGet(("https://api.sussy.dev/v1/KeySystem/Assets/GetPublicFile?fileName=Codexus_Hub_loader.lua"), true))()
+  	end    
+})
+Tab:AddButton({
+	Name = "Arm Wrestle Simulator",
+	Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Jetyas123/ResettHub/main/Script"))()
+  	end    
+})
+Tab:AddButton({
+	Name = "Arm Wrestle Simulator #2",
+	Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/ToxicTDX/ToxicTDX-V2/main/ToxicTDX%20V2", true))()
+  	end    
+})
+Tab:AddButton({
+	Name = "Arm Wrestle Simulator #3",
+	Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Tankz3502/ProjectTesla/main/wercT.lua"))();
+  	end    
+})
+Tab:AddButton({
+	Name = "Attack On Titan",
+	Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Bebo-Mods/XHub/main/AOTEvo.lua"))()
+  	end    
+})
+Tab:AddButton({
+	Name = "Barry's Prison Run",
+	Callback = function()
+        local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+        local Window = Library.CreateLib("Barry's prison", "DarkTheme")
+        
+        --MAIN
+        local Main = Window:NewTab("Main")
+        local MainSection = Main:NewSection("Main")
+        
+        MainSection:NewButton("FoodZooka", "Gives you a FoodZooka", function()
+            local new = game.ReplicatedStorage.FoodZooka:Clone()
+            new.Parent = game:GetService("Players").LocalPlayer.Backpack
+        end)
+        
+        MainSection:NewButton("Shop Items", "Gives yourself All Shop Items", function()
+            for i, v in pairs(game:GetService("ReplicatedStorage").ItemModels.VipTools:GetChildren()) do
+                local new = v:Clone()
+                new.Parent = game.Players.LocalPlayer.Backpack
+            end
+        end)
+        
+        MainSection:NewTextBox("Tp to stage (Max 25)", "Teleports you to stage number", function(v)
+            local A_1 = v
+            local Event = game:GetService("ReplicatedStorage").StageChange
+            Event:FireServer(A_1)
+        
+           game:GetService("Players").LocalPlayer.SpawnVal.Value = v
+        
+           game:GetService("Players").LocalPlayer.Character.Humanoid.Health = 0
+        end)
+        
+        -- PLAYER
+        local Player = Window:NewTab("Player")
+        local PlayerSection = Player:NewSection("Player")
+        
+        PlayerSection:NewSlider("Your walk speed", "Changes your walk speed", 250, 16, function(v)
+            game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = v
+        end)
+        
+        PlayerSection:NewSlider("Your jump power", "Changes your jump power", 250, 50, function(v)
+            game.Players.LocalPlayer.Character.Humanoid.JumpPower = v
+        end)
+        
+        PlayerSection:NewButton("Disable shop ", "Disables shop", function()
+            game:GetService("Players").LocalPlayer.PlayerGui.ShopScreen:Destroy()
+        end)
+        
+        --BARRY
+        local Barry = Window:NewTab("Barry")
+        local BarrySection = Barry:NewSection("Barry")
+        
+        BarrySection:NewSlider("Barry's Speed", "Sets barry's speed", 500, 0, function(v)
+            game:GetService("Workspace").Policeman1.guard.Dummy.zomb.WalkSpeed = v
+        end)
+        
+        BarrySection:NewButton("Kill Barry (Reset to undo)", "Kills berry", function()
+            game:GetService("Workspace").Policeman1.guard.Dummy.zomb.Value.Value = false
+        end)
+        
+        BarrySection:NewButton("Reset Berry's speed)", "Resets his speed", function()
+            game:GetService("Workspace").Policeman1.guard.Dummy.zomb.WalkSpeed = 16
+        end)
+        
+        -- BARRY2
+        local Barry2 = Window:NewTab("Barry2")
+        local Barry2Section = Barry2:NewSection("Barry2")
+        
+        Barry2Section:NewSlider("Barry2's Speed", "Sets barry2's speed", 500, 0, function(v)
+            game:GetService("Workspace").Policeman2.guard.Dummy.zomb.WalkSpeed = v
+        end)
+        
+        Barry2Section:NewButton("Kill Barry2 (Reset to undo)", "Kills berry2", function()
+            game:GetService("Workspace").Policeman2.guard.Dummy.zomb.Value.Value = false
+        end)
+        
+        Barry2Section:NewButton("Reset Berry's speed)", "Resets his speed", function()
+            game:GetService("Workspace").Policeman2.guard.Dummy.zomb.WalkSpeed = 16
+        end)
+        
+        -- SETTINGS
+        local Settings = Window:NewTab("Settings")
+        local SettingsSection = Settings:NewSection("Settings")
+        
+        SettingsSection:NewKeybind("Toggle Ui", "Toggles ui", Enum.KeyCode.F, function()
+            Library:ToggleUI()
+        end)
+  	end    
+})
+Tab:AddButton({
+	Name = "Banning Simulator X",
+	Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/ZSIOffical/Soloware-Rework/main/Games/BSX.lua"))()
+  	end    
+})
+Tab:AddButton({
+	Name = "Base Battles",
+	Callback = function()
+        loadstring(game:HttpGet(("https://raw.githubusercontent.com/skatbr/Roblox-Releases/main/Base%20Battles.lua"),true))()
+  	end    
+})
+Tab:AddButton({
+	Name = "Base Raiders",
+	Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/JustAP1ayer/PlayerHubOther/main/PlayerHubLoader.lua",true))()
+  	end    
+})
+Tab:AddButton({
+	Name = "Bedwars",
+	Callback = function()
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/xElyasx/Future-Client/main/Loader.lua', true))()
+  	end    
+})
+Tab:AddButton({
+	Name = "Bedwars #2",
+	Callback = function()
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/joeengo/Future/main/loadstring.lua', true))()
+  	end    
+})
+Tab:AddButton({
+	Name = "Big Brain Simulator",
+	Callback = function()
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/1201for/V.G-Hub/main/V.Ghub'))()
+  	end    
+})
+Tab:AddButton({
+	Name = "Blox Fruits",
+	Callback = function()
+        _G.key = "iloverobucs" --the key is between the two " "
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/NukeVsCity/TheALLHACKLoader/main/NukeLoader"))()
+        
+        
+        --also key for the manual loader is "      iloverobucs      "
+  	end    
+})
+Tab:AddButton({
+	Name = "Bloxfruits #2",
+	Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/NickelHUBB/SonicTuru/main/Protected-25.lua"))() 
+  	end    
+})
+Tab:AddButton({
+	Name = "Blue Heater",
+	Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/NOOBHUBX/Game/main/Loading"))()
+  	end    
+})
+Tab:AddButton({
+	Name = "Break In (Story)",
+	Callback = function()
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/laerafg/laernixhax/main/main.lua'))()
+  	end    
+})
+Tab:AddButton({
+	Name = "Build A Boat",
+	Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Vynixius/main/Build%20A%20Boat%20For%20Treasure/BABFT"))()
+  	end    
+})
+Tab:AddButton({
+	Name = "Camping",
+	Callback = function()
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/xFLCN/Camping/Scripts/Camping%201'))();
+  	end    
+})
+Tab:AddButton({
+	Name = "Car Crushers 2",
+	Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/limaspeedy/limaspeedy/main/HubLDS"))()
+  	end    
+})
+Tab:AddButton({
+	Name = "Car Dealership",
+	Callback = function()
+        pcall(function()
+            repeat wait() until game:IsLoaded()
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/03sAlt/BlueLockSeason2/main/README.md"))()
+        end)
+  	end    
+})
+Tab:AddButton({
+	Name = "Car Driving Indonesia",
+	Callback = function()
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/Awakenchan/Misc-Release/main/Car%20Driving%20Indonesia%20%7C%20Cafe%20auto%20farm'))()
+  	end    
+})
+Tab:AddButton({
+	Name = "Cart + Cart Ride Into Giant Noob",
+	Callback = function()
+        AMOUNT = 5000
+TICK = tick()
+for p=0,AMOUNT do
+	for i,v in pairs(workspace.Building.Baseplate["Carts + Jeeps"]:GetChildren()) do
+		if v.Name ~= "Cart" then continue end
+		for i,v in pairs(v:GetChildren()) do
+			if v.Name ~= "Cart" then continue end
+			fireclickdetector(v.Up.ClickDetector)
+		end
+	end
+end
+    end
+})
+Tab:AddButton({
+	Name = "Case Opening Simulator 2",
+	Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/ToxicTDX/ToxicTDX-V2/main/ToxicTDX%20V2", true))()
+  	end    
+})
+Tab:AddButton({
+	Name = "Chest Simulator",
+	Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/bunnynwy/games/main/main.lua"))()
+  	end    
+})
+Tab:AddButton({
+	Name = "Clicker Simulator",
+	Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/ExtremeAntonis/KeySystemUI/main/KeySystemUI-Obfuscated.lua"))()
+  	end    
+})
+Tab:AddButton({
+	Name = "Daybreak",
+	Callback = function()
+        loadstring(game:HttpGet(('https://raw.githubusercontent.com/RemoteScript/DB2/main/Daybreak%202.lua'),true))()
+  	end    
+})
+Tab:AddButton({
+	Name = "Daycare Center",
+	Callback = function()
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/Yousuck780/daycare-gui/main/noobs'))()
+  	end    
+})
+Tab:AddButton({
+	Name = "Dragon Ball Final",
+	Callback = function()
+        local AttackDelay = 10
+        local HitAmount = 50
+        
+        repeat wait() until game:IsLoaded()
+        local player = game.Players.LocalPlayer
+        local character = player.Character or player.CharacterAdded:wait()
+        repeat wait() until player and character
+        local Target = player.Name .. "'s Shadow"
+        
+        
+        
+        local function Damage()
+           while true do
+           if game:GetService("Workspace"):FindFirstChild(Target) and game:GetService("Workspace"):FindFirstChild(Target):WaitForChild("Humanoid").Health > 0 then
+           for i=1,HitAmount do
+           task.wait()
+        
+        _G.magnitude = 10
+        _G.stuntime = 60
+        _G.targetplayers = false
+        
+        
+        
+        
+          for i,v in pairs(workspace:GetChildren()) do
+          if game.Players:GetPlayerFromCharacter(v) == nil and v:FindFirstChild("Torso") and (player.Character.Torso.Position - v.Torso.Position).Magnitude <= _G.magnitude then
+        local args = {
+          [1] = v,
+          [2] = {
+              ["HitTime"] = _G.stuntime,
+              ["Type"] = "Normal",
+              ["HitEffect"] = game:GetService("ReplicatedStorage").Resources.OtherEffects.NormalHitEffect2,
+              ["VictimCFrame"] = v.Torso.CFrame,
+              ["HurtAnimation"] = game:GetService("ReplicatedStorage").Resources.Animations.HurtAnimations.Hurt2,
+              ["Velocity"] = Vector3.new(0.01, 0.01, 0.01) --[[Vector3]],
+              ["Sound"] = game:GetService("ReplicatedStorage").Resources.Sounds.Combat.NormalKick,
+              ["Damage"] = 1000
+          }
+        }
+        
+        game:GetService("ReplicatedStorage").Remotes.Damage4:InvokeServer(unpack(args))
+        
+        end
+        end
+        end
+        end
+        task.wait(AttackDelay)
+        end
+        end
+        
+        
+        
+        local function StickTo()
+        while true do
+           if not game:GetService("Workspace"):FindFirstChild(Target) then
+               local args = {
+               [1] = "Summon"
+               }
+        
+               game:GetService("Players").LocalPlayer.PlayerGui._NCharge.Scripts.Summon:FireServer(unpack(args))
+               repeat task.wait() until game:GetService("Workspace"):FindFirstChild(Target)
+        
+           elseif game:GetService("Workspace"):FindFirstChild(Target) and game:GetService("Workspace"):FindFirstChild(Target):WaitForChild("Humanoid").Health > 0 then
+               player.Character.HumanoidRootPart.CFrame = game:GetService("Workspace")[Target].HumanoidRootPart.CFrame * CFrame.new(Vector3.new(1,1,10))
+           end
+           task.wait()
+        end
+        end
+        task.spawn(StickTo)
+        task.wait(1)
+        Damage()
+  	end    
+})
+Tab:AddButton({
+	Name = "Dragon Blox",
+	Callback = function()
+        local Material = loadstring(game:HttpGet("https://raw.githubusercontent.com/BimbusCoder/Roblox-Scripts/master/MaterialLua"))()
+        local UI = Material.Load({Title = "Dragon Blox Ultimate | {}#0001", Style = 1, SizeX = 250, SizeY = 250, Theme = "Mocha"})
+        
+        -- Tabs
+        local Main = UI.New({Title = "Main"})
+        --
+        local plr = game.Players.LocalPlayer
+        local RunService = game:GetService('RunService')
+        local questRemote = game:GetService("ReplicatedStorage").Package.Events.Qaction
+        local punchRemote = game:GetService("ReplicatedStorage").Package.Events.p
+        local equipRemote = game:GetService("ReplicatedStorage").Package.Events.equipskill
+        local rebirthRemote = game:GetService("ReplicatedStorage").Package.Events.reb
+        
+        local Settings = {Tables = {Forms = {'SSJB4','True God of Creation','True God of Destruction','Super Broly','LSSJG','LSSJ4','SSJG4','LSSJ3','SSJ5','Mystic Kaioken','LSSJ Kaioken','SSJ2 Kaioken','SSJR3','SSJB3','God Of Destruction','God Of Creation','Jiren Ultra Instinct', 'Mastered Ultra Instinct','Godly SSJ2', 'Ultra Instinct Omen', 'Evil SSJ','Blue Evolution','Dark Rose','Kefla SSJ2','SSJ Berserker','True Rose', 'SSJB Kaioken','SSJ Rose', 'SSJ Blue','Corrupt SSJ','SSJ Rage','SSJG','SSJ4','Mystic','LSSJ','SSJ3','Spirit SSJ','SSJ2 Majin','SSJ2','SSJ Kaioken','SSJ','FSSJ','Kaioken'}};Variables = {Farm = false}}
+        setmetatable(Settings, {__index = function() warn('Dumbass') end}) -- literally no use i was just bored
+        
+        local function returnQuest(boolean)
+            local quest = getrenv()._G.x.GetRecommendedQuest(game.Players.LocalPlayer)
+            if (boolean) and quest:find('Bills Planet') then
+                return 'SSJG Kakata'
+            else
+                return quest
+            end
+        end
+        local function transform()
+            pcall(function()
+                for i,v in pairs(Settings.Tables.Forms) do
+                    if equipRemote:InvokeServer(v) then
+                        break
+                    end
+                end
+                repeat wait()
+                    if plr.Character.Status.SelectedTransformation.Value ~= plr.Character.Status.Transformation.Value then
+                        game:GetService("ReplicatedStorage").Package.Events.ta:InvokeServer()
+                    end
+                until game.Players.LocalPlayer.Character.Status.SelectedTransformation.Value == game.Players.LocalPlayer.Character.Status.Transformation.Value
+            end)
+        end
+        
+        RunService.RenderStepped:Connect(function()
+            if Settings.Variables.Farm then
+                plr.Character:WaitForChild('Humanoid'):ChangeState(11)
+            end
+        end)
+        local RebirthFarm = Main.Toggle({
+            Text = 'Rebirth-Farm',
+            Callback = function(bool)
+                Settings.Variables.Farm = bool
+                while bool and wait() do
+                    if (not plr.PlayerGui.Main.MainFrame.Frames.Quest.Nop.Visible and bool) then
+                        for i,v in next, workspace.Living:GetChildren() do
+                            if (v.Name == returnQuest(true) or v.Name == game:GetService("ReplicatedStorage").Package.Quests[returnQuest(true)].Objective.Value) and not plr.PlayerGui.Main.MainFrame.Frames.Quest.Nop.Visible and v:FindFirstChild('Humanoid') and v:FindFirstChild('HumanoidRootPart') and v.Humanoid.Health > 0 then
+                                repeat wait()
+                                    pcall(function() plr.Character.HumanoidRootPart.CFrame = v.HumanoidRootPart.CFrame * CFrame.new(0,0,2) end)
+                                    punchRemote:FireServer('Blacknwhite27',1)
+                                until not v or not v:FindFirstChild('Humanoid') or not v:FindFirstChild('HumanoidRootPart') or v.Humanoid.Health <= 0 or not Settings.Variables.Farm or plr.PlayerGui:WaitForChild('Main').MainFrame.Frames.Quest.Nop.Visible
+                            end
+                        end
+                    else
+                        pcall(function() questRemote:InvokeServer(workspace.Others.NPCs[returnQuest(true)]) end)
+                    end
+                end
+            end
+        })
+        
+        local GodMode = Main.Toggle({
+            Text = 'GodMode',
+            Callback = function(bool)
+                pcall(function()
+                    if bool then
+                        plr.Character.Status.Blocking.Parent = nil
+                    else
+                        plr.Character.Humanoid.Health = -math.huge
+                    end
+                end)
+            end
+        })
+        local AutoTransform = Main.Toggle({
+            Text = 'Auto-Transform',
+            Callback = function(bool)
+                pcall(function()
+                    while bool and wait() do
+                        transform()
+                    end
+                end)
+            end
+        })
+        local AutoRebirth = Main.Toggle({
+            Text = 'Rebirth',
+            Callback = function(bool)
+                while bool and wait() do
+                    rebirthRemote:InvokeServer()
+                end
+            end
+        })
+        local AutoCharge = Main.Toggle({
+            Text = 'Auto-Charge',
+            Callback = function(bool)
+                while bool and wait() do
+                    game:GetService("ReplicatedStorage").Package.Events.cha:InvokeServer('Blacknwhite27')
+                end
+            end
+        })
+  	end    
+})
+Tab:AddButton({
+	Name = "Dragon Blox #2",
+	Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Blackout4781/Roblox-Scripts/main/DragonBlox"))()
+  	end    
+})
+Tab:AddButton({
+	Name = "Drive World",
+	Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/yoolovr/Linear-Hub/main/loader.lua"))()
+  	end    
+})
+Tab:AddButton({
+	Name = "Driving Empire",
+	Callback = function()
+        _G.RedGUI = true
+        _G.Theme = "Dark" -- Must disable or remove _G.RedGUI to use
+        --Themes: Light, Dark, Mocha, Aqua and Jester
+        
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/CasperFlyModz/discord.gg-rips/main/DrivingEmpire.lua"))()
+  	end    
+})
+Tab:AddButton({
+	Name = "Driving Empire Autofarm",
+	Callback = function()
+        for index, value in pairs(getconnections(game:GetService("Players").LocalPlayer.Idled)) do
+            value:Disable()
+            end
+            local idlepos = 144
+            while true do
+            local Character = game:GetService("Players").LocalPlayer.Character
+            if Character then
+            local VehicleSeat = Character:FindFirstChildWhichIsA("Humanoid").SeatPart
+            if VehicleSeat and typeof(VehicleSeat) == "Instance" and VehicleSeat:IsA("VehicleSeat") then
+            if idlepos >= 144 then
+            local Vehicle = VehicleSeat:FindFirstAncestorWhichIsA("Model")
+            Character.Parent = Vehicle
+            Vehicle:MoveTo(Vector3.new(0, 1e3 * 1.8, 0))
+            Character.Parent = workspace
+            idlepos = 0
+            end
+            VehicleSeat.CFrame = CFrame.new(VehicleSeat.CFrame.X, 1e3, VehicleSeat.CFrame.Z) * CFrame.fromEulerAnglesXYZ(math.rad(0), math.rad(180), math.rad(0))
+            VehicleSeat.AssemblyLinearVelocity = VehicleSeat.CFrame.LookVector.Unit * Vector3.new(320, 320, 320) + Vector3.new(100 * math.cos((tick() * 60) / 28), 100 * math.cos((tick() * 60) / -28), 100 * math.cos((tick() * 60) / -28))
+            VehicleSeat.AssemblyAngularVelocity = Vector3.new(0, 0, 0)
+            end
+            end
+            task.synchronize()
+            idlepos = idlepos + 1
+            task.desynchronize()
+            task.wait(0)
+            end
+  	end    
+})
+Tab:AddButton({
+	Name = "Ez Hub",
+	Callback = function()
+        loadstring(game:HttpGet(('https://raw.githubusercontent.com/debug420/Ez-Industries-Launcher-Data/master/Launcher.lua'),true))() 
+  	end    
+})
+Tab:AddButton({
+	Name = "Every Second You Get +1 Jump",
+	Callback = function()
+        loadstring(game:HttpGet(('https://raw.githubusercontent.com/zeuise0002/SSSWWW222/main/README.md'),true))()
+  	end    
+})
+Tab:AddButton({
+	Name = "Family Paradise",
+	Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/NekoMe0w/KyaniteHub/main/loader.lua", true))()
+  	end    
+})
+Tab:AddButton({
+	Name = "Farm Factory Tycoon",
+	Callback = function()
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/TheAbsolutionism/AbsolutionismHub/main/HubExecutor',true))()
+  	end    
+})
+Tab:AddButton({
+	Name = "Firework Simulator",
+	Callback = function()
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/Ihaveash0rtnamefordiscord/BorkWare/main/Scripts/' .. game.GameId .. ".lua"))(' Watermelon ? ')
+  	end    
+})
+Tab:AddButton({
+	Name = "Fishing Simulator",
+	Callback = function()
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/reddythedev/robloxthings/main/_Loader'))()
+  	end    
+})
+Tab:AddButton({
+	Name = "Gun Testing",
+	Callback = function()
+      		loadstring(game:HttpGet("https://raw.githubusercontent.com/MeatBall-Is-God/Scripts/main/Gun%20Testing%20Gui"))()
+  	end    
+})
+Tab:AddButton({
+	Name = "Heaven Stand",
+	Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/HackerMan33106/Loader-M/main/Loader.lua"))()
+  	end    
+})
+Tab:AddButton({
+	Name = "Heroes Battlegrounds",
+	Callback = function()
+      		-- RÃ©cupÃ¨re la variable globale
+getgenv().BullyingEnabled = true
+ 
+ 
+ 
+local TweenService = game:GetService("TweenService")
+local character = game.Players.LocalPlayer.Character or game.Players.LocalPlayer.CharacterAdded:Wait()
+-- RÃ©cupÃ¨re le service Players
+local Players = game:GetService("Players")
+ 
+-- RÃ©cupÃ¨re le joueur local
+local player = Players.LocalPlayer
+ 
+local function isTemporaryInvincible(player)
+	local character1 = player.Character or player.CharacterAdded:Wait()
+	if(character1:FindFirstChild("ForceField")) then
+		return true
+	else
+		return
+	end
+end
+ 
+local function teleportPlayerBehindPlayer(HRP)
+ 
+    local targetHRP = HRP
+    local targetDirection = targetHRP.CFrame.LookVector
+ 
+    local offset = CFrame.new(0, 0, 2.5) -- Changer la valeur "5" pour ajuster la distance entre les deux joueurs
+ 
+    local teleportTween = TweenService:Create(player.Character.HumanoidRootPart, TweenInfo.new(0.01), {
+        CFrame = targetHRP.CFrame * offset,
+    })
+    teleportTween:Play()
+ 
+    player.Character:SetPrimaryPartCFrame(CFrame.new(player.Character.HumanoidRootPart.Position, targetHRP.Position))
+	wait()
+end
+ 
+local args = {
+    [1] = "LeftClick"
+}
+ 
+local function stalkPlayer(target_player)
+	game:GetService("Workspace").Gravity = 0
+	local torso = game.Players[target_player].Character:FindFirstChild("HumanoidRootPart")
+	if torso then
+		if isTemporaryInvincible(game.Players[target_player]) then
+			print("shit man is invincible its useless to stalk him")
+			return
+		end
+		repeat 
+			teleportPlayerBehindPlayer(torso)
+			game:GetService("Players").LocalPlayer.Character.Main.RemoteEvent:FireServer(unpack(args))
+ 
+		until torso.Parent.Humanoid.Health <= 0 or torso == nil 
+	else
+    	print("Victim does not have a HumanoidRootPart.")
+	end
+end
+ 
+ 
+ 
+ 
+-- Parcourt tous les joueurs
+while getgenv().BullyingEnabled == true do
+    for _, otherPlayer in pairs(Players:GetPlayers()) do
+        -- VÃ©rifie si le joueur est diffÃ©rent du joueur local
+        if otherPlayer ~= player and getgenv().BullyingEnabled == true then
+            local success, result = pcall(function()
+                stalkPlayer(otherPlayer.Name)
+            end)
+            if not success then
+                -- Une exception s'est produite, vous pouvez choisir d'afficher un message ou de ne rien faire
+                print("Une exception s'est produite pour le joueur " .. otherPlayer.Name .. " : " .. result)
+            end
+        elseif getgenv().BullyingEnabled == false then
+            break
+        end
+    end
+    wait()
+end
+  	end    
+})
+Tab:AddButton({
+	Name = "Hood Modded",
+	Callback = function()
+        loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/Rippeed/DaHoodinary/main/chariotsware"))()
+  	end    
+})
+Tab:AddButton({
+	Name = "Jailbreak",
+	Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/LOLEduard/Eduard-s-Hub-V2-UI-Revamp-/main/loadstring",true))()
+  	end    
+})
+Tab:AddButton({
+	Name = "Jump Clicker",
+	Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/xdeformedbread/My-Scripts/main/Jump%20Race.lua"))()
+  	end    
+})
+Tab:AddButton({
+	Name = "Kick Off",
+	Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/TheHanki/Hawk/main/Loader", true))()
+  	end    
+})
+Tab:AddButton({
+	Name = "Lucky Blocks Battlegrounds",
+	Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/xkvl2012/luckyblock/main/MainLuckyBlock"))()
+  	end    
+})
+Tab:AddButton({
+	Name = "Lucky Blocks Battlegrounds #2",
+	Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/arlists/Sky-Hub/main/Main", true))()
+  	end    
+})
+Tab:AddButton({
+	Name = "Left 2 Die",
+	Callback = function()
+        local loadGun;
+        for i,v in next, getgc(true) do
+            if type(v) == 'function' then
+                if getinfo(v).name == 'loadGun' then
+                loadGun = v;
+                end
+            end
+        end
+        local Weapons = getupvalue(loadGun, 5)
+        function ModGun(x)
+        rawset(x, "spread", 0)
+        rawset(x, "penetration", 99999)
+        rawset(x, "ammo", math.huge)
+        rawset(x, "magsize", math.huge)
+        rawset(x, "c_recoil", 0)
+        rawset(x, "c_recoil_side", 0)
+        end
+        for I, Weapon in next, Weapons do
+            ModGun(Weapon)
+        end
+  	end    
+})
+Tab:AddButton({
+	Name = "Legends Of Speed",
+	Callback = function()
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/StellarHubX/Main/main/source'))()
+  	end    
+})
+Tab:AddButton({
+	Name = "Legends Of Speed #2",
+	Callback = function()
+        loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/lux933/Arch/main/Utilities/loader.lua"))()
+  	end    
+})
+Tab:AddButton({
+	Name = "Legends Of Speed #3",
+	Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/SmoxHub/SmoxHub/main/Legends%20Of%20Speed"))()
+  	end    
+})
+Tab:AddButton({
+	Name = "Lumber Tycoon 2",
+	Callback = function()
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/Butterisgood/butter-hub/main/Butterhub.txt'))()
+  	end    
+})
+Tab:AddButton({
+	Name = "Mad City",
+	Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/aymarko/ProBaconHub/main/probacon1234/aymarko/MadCity/GUI/Beta"))()
+  	end    
+})
+Tab:AddButton({
+	Name = "Military Tycoon",
+	Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/OopssSorry/OopssGui/main/MTevent3.lua"))()
+  	end    
+})
+Tab:AddButton({
+	Name = "Military War Tycoon",
+	Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/0xd5f/CERBERUS/main/CERBERUS.lua", true))()
+  	end    
+})
 local Tab = Window:MakeTab({
 	Name = "Free Gamepass",
 	Icon = "rbxassetid://7734056747",
