@@ -1062,6 +1062,45 @@ Tab:AddButton({
 })
 
 local Section = Tab:AddSection({
+	Name = "Nico's Nextbots"
+})
+Tab:AddButton({
+	Name = "Nicos Nextbot Killer",
+	Callback = function()
+        loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/fartbutt69/Nico-s-Nextbot-Killer/main/script.lua", true))()
+  	end    
+})
+Tab:AddButton({
+	Name = "Nicos Nextbots [blackouts] - Powerbox ESP & More",
+	Callback = function()
+        loadstring(game:HttpGet("https://fern.wtf/scripts/nico_bot.lua", true))()
+  	end    
+})
+Tab:AddButton({
+	Name = "Nicos Nextbots [blackouts] Open All Doors",
+	Callback = function()
+        while task.wait(0.5) do
+            for i,v in next, workspace.doors:GetChildren() do
+                game.ReplicatedStorage.events.door:FireServer(v)
+            end
+         end
+  	end    
+})
+Tab:AddButton({
+	Name = "Nicos Nextbots Auto BHOP",
+	Callback = function()
+        local LocalPlayer = game.Players.LocalPlayer
+
+game:GetService("RunService").Heartbeat:Connect(function()
+   if LocalPlayer.Character and LocalPlayer.Character:FindFirstChild("Humanoid") then
+       LocalPlayer.Character.Humanoid.Jump = true
+       LocalPlayer.Character.Humanoid.JumpPower = 40 -- because they make it 0
+   end
+end)
+  	end    
+})
+
+local Section = Tab:AddSection({
 	Name = "Breaking Point"
 })
 Tab:AddButton({
@@ -1262,7 +1301,7 @@ local Section = Tab:AddSection({
 	Name = "T-Titans Battlegrounds"
 })
 Tab:AddButton({
-	Name = "T-Titans Battlegrounds Gui",
+	Name = "T-Titans Battlegrounds Gui #1",
 	Callback = function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/ToraIsMe/ToraIsMe/main/0ttitan", true))()
 
@@ -1331,6 +1370,328 @@ Tab:AddButton({
             end)
         end)
   	end    
+})
+Tab:AddButton({
+	Name = "T-Titans Battlegrounds Gui #2",
+	Callback = function()
+        local ScreenGui = Instance.new("ScreenGui")
+        local main = Instance.new("Frame")
+        local label = Instance.new("TextLabel")
+        local Hitbox = 
+        Instance.new("TextButton")
+        
+        ScreenGui.Parent = game.CoreGui
+        
+        main.Name = "main"
+        main.Parent = ScreenGui
+        main.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+        main.Position = UDim2.new(0.40427351, 0, 0.34591195, 0)
+        main.Size = UDim2.new(0, 175, 0, 200)
+        main.Active = true
+        main.Draggable = true
+        
+        label.Name = "label"
+        label.Parent = main
+        label.BackgroundColor3 = Color3.fromRGB(139,0,0)
+        label.Size = UDim2.new(0, 175, 0, 20)
+        label.Font = Enum.Font.SourceSans
+        label.Text = "Teen Titan GUI"
+        label.TextColor3 = Color3.fromRGB(0, 0, 0)
+        label.TextScaled = true
+        label.TextSize = 5.000
+        label.TextWrapped = true
+        
+        Hitbox.Name = "Hitbox"
+        Hitbox.Parent = main
+        Hitbox.BackgroundColor3 = Color3.fromRGB(0, 0, 255)
+        Hitbox.Position = UDim2.new(0.114285722, 0, 0.372448981, 0)
+        Hitbox.Size = UDim2.new(0.17, 100, 0, 100)
+        Hitbox.Font = Enum.Font.SourceSans
+        Hitbox.Text = "Hitbox + inf ammo + Esp"
+        Hitbox.TextColor3 = Color3.fromRGB(0, 0, 0)
+        Hitbox.TextSize = 15.000
+        Hitbox.MouseButton1Down:connect(function()
+        local t = game:GetService("ReplicatedStorage")["Shared_Modules"].Tools["Wave 0"].Starfire["Shared_StarBolt"]
+        local w = require(t)
+        w.DEBOUNCE = .001
+        w.DAMAGE = 400
+        
+        
+        
+        --credits to the owner
+        
+        for i, v in pairs(game:GetService('ReplicatedStorage')['Shared_Modules'].Tools:GetDescendants()) do
+        if v:IsA('ModuleScript') then
+        local Module = require(v)
+        Module.DEBOUNCE = 0
+        Module.DAMAGE = 999999999999
+        end
+        end
+        
+        local function API_Check()
+            if Drawing == nil then
+                return "No"
+            else
+                return "Yes"
+            end
+        end
+        
+        local Find_Required = API_Check()
+        
+        if Find_Required == "No" then
+            game:GetService("StarterGui"):SetCore("SendNotification",{
+                Title = "Exunys Developer";
+                Text = "Tracer script could not be loaded because your exploit is unsupported.";
+                Duration = math.huge;
+                Button1 = "OK"
+            })
+        
+            return
+        end
+        
+        local RunService = game:GetService("RunService")
+        local Players = game:GetService("Players")
+        local Camera = game:GetService("Workspace").CurrentCamera
+        local UserInputService = game:GetService("UserInputService")
+        local TestService = game:GetService("TestService")
+        
+        local Typing = false
+        
+        _G.SendNotifications = true   -- If set to true then the script would notify you frequently on any changes applied and when loaded / errored. (If a game can detect this, it is recommended to set it to false)
+        _G.DefaultSettings = false   -- If set to true then the tracer script would run with default settings regardless of any changes you made.
+        
+        _G.TeamCheck = false   -- If set to true then the script would create tracers only for the enemy team members.
+        
+        --[!]-- ONLY ONE OF THESE VALUES SHOULD BE SET TO TRUE TO NOT ERROR THE SCRIPT --[!]--
+        
+        _G.FromMouse = false   -- If set to true, the tracers will come from the position of your mouse curson on your screen.
+        _G.FromCenter = false   -- If set to true, the tracers will come from the center of your screen.
+        _G.FromBottom = true   -- If set to true, the tracers will come from the bottom of your screen.
+        
+        _G.TracersVisible = true   -- If set to true then the tracers will be visible and vice versa.
+        _G.TracerColor = Color3.fromRGB(255, 80, 10)   -- The color that the tracers would appear as.
+        _G.TracerThickness = 1   -- The thickness of the tracers.
+        _G.TracerTransparency = 0.7   -- The transparency of the tracers.
+        
+        _G.ModeSkipKey = Enum.KeyCode.E   -- The key that changes between modes that indicate where will the tracers come from.
+        _G.DisableKey = Enum.KeyCode.Q   -- The key that disables / enables the tracers.
+        
+        local function CreateTracers()
+            for _, v in next, Players:GetPlayers() do
+                if v.Name ~= game.Players.LocalPlayer.Name then
+                    local TracerLine = Drawing.new("Line")
+            
+                    RunService.RenderStepped:Connect(function()
+                        if workspace:FindFirstChild(v.Name) ~= nil and workspace[v.Name]:FindFirstChild("HumanoidRootPart") ~= nil then
+                            local HumanoidRootPart_Position, HumanoidRootPart_Size = workspace[v.Name].HumanoidRootPart.CFrame, workspace[v.Name].HumanoidRootPart.Size * 1
+                            local Vector, OnScreen = Camera:WorldToViewportPoint(HumanoidRootPart_Position * CFrame.new(0, -HumanoidRootPart_Size.Y, 0).p)
+                            
+                            TracerLine.Thickness = _G.TracerThickness
+                            TracerLine.Transparency = _G.TracerTransparency
+                            TracerLine.Color = _G.TracerColor
+        
+                            if _G.FromMouse == true and _G.FromCenter == false and _G.FromBottom == false then
+                                TracerLine.From = Vector2.new(UserInputService:GetMouseLocation().X, UserInputService:GetMouseLocation().Y)
+                            elseif _G.FromMouse == false and _G.FromCenter == true and _G.FromBottom == false then
+                                TracerLine.From = Vector2.new(Camera.ViewportSize.X / 2, Camera.ViewportSize.Y / 2)
+                            elseif _G.FromMouse == false and _G.FromCenter == false and _G.FromBottom == true then
+                                TracerLine.From = Vector2.new(Camera.ViewportSize.X / 2, Camera.ViewportSize.Y)
+                            end
+        
+                            if OnScreen == true  then
+                                TracerLine.To = Vector2.new(Vector.X, Vector.Y)
+                                if _G.TeamCheck == true then 
+                                    if Players.LocalPlayer.Team ~= v.Team then
+                                        TracerLine.Visible = _G.TracersVisible
+                                    else
+                                        TracerLine.Visible = false
+                                    end
+                                else
+                                    TracerLine.Visible = _G.TracersVisible
+                                end
+                            else
+                                TracerLine.Visible = false
+                            end
+                        else
+                            TracerLine.Visible = false
+                        end
+                    end)
+        
+                    Players.PlayerRemoving:Connect(function()
+                        TracerLine.Visible = false
+                    end)
+                end
+            end
+        
+            Players.PlayerAdded:Connect(function(Player)
+                Player.CharacterAdded:Connect(function(v)
+                    if v.Name ~= game.Players.LocalPlayer.Name then
+                        local TracerLine = Drawing.new("Line")
+                
+                        RunService.RenderStepped:Connect(function()
+                            if workspace:FindFirstChild(v.Name) ~= nil and workspace[v.Name]:FindFirstChild("HumanoidRootPart") ~= nil then
+                                local HumanoidRootPart_Position, HumanoidRootPart_Size = workspace[v.Name].HumanoidRootPart.CFrame, workspace[v.Name].HumanoidRootPart.Size * 1
+                                local Vector, OnScreen = Camera:WorldToViewportPoint(HumanoidRootPart_Position * CFrame.new(0, -HumanoidRootPart_Size.Y, 0).p)
+                                
+                                TracerLine.Thickness = _G.TracerThickness
+                                TracerLine.Transparency = _G.TracerTransparency
+                                TracerLine.Color = _G.TracerColor
+        
+                                if _G.FromMouse == true and _G.FromCenter == false and _G.FromBottom == false then
+                                    TracerLine.From = Vector2.new(UserInputService:GetMouseLocation().X, UserInputService:GetMouseLocation().Y)
+                                elseif _G.FromMouse == false and _G.FromCenter == true and _G.FromBottom == false then
+                                    TracerLine.From = Vector2.new(Camera.ViewportSize.X / 2, Camera.ViewportSize.Y / 2)
+                                elseif _G.FromMouse == false and _G.FromCenter == false and _G.FromBottom == true then
+                                    TracerLine.From = Vector2.new(Camera.ViewportSize.X / 2, Camera.ViewportSize.Y)
+                                end
+        
+                                if OnScreen == true  then
+                                    TracerLine.To = Vector2.new(Vector.X, Vector.Y)
+                                    if _G.TeamCheck == true then 
+                                        if Players.LocalPlayer.Team ~= Player.Team then
+                                            TracerLine.Visible = _G.TracersVisible
+                                        else
+                                            TracerLine.Visible = false
+                                        end
+                                    else
+                                        TracerLine.Visible = _G.TracersVisible
+                                    end
+                                else
+                                    TracerLine.Visible = false
+                                end
+                            else
+                                TracerLine.Visible = false
+                            end
+                        end)
+        
+                        Players.PlayerRemoving:Connect(function()
+                            TracerLine.Visible = false
+                        end)
+                    end
+                end)
+            end)
+        end
+        
+        UserInputService.TextBoxFocused:Connect(function()
+            Typing = true
+        end)
+        
+        UserInputService.TextBoxFocusReleased:Connect(function()
+            Typing = false
+        end)
+        
+        UserInputService.InputBegan:Connect(function(Input)
+            if Input.KeyCode == _G.ModeSkipKey and Typing == false then
+                if _G.FromMouse == true and _G.FromCenter == false and _G.FromBottom == false and _G.TracersVisible == true then
+                    _G.FromCenter = false
+                    _G.FromBottom = true
+                    _G.FromMouse = false
+        
+                    if _G.SendNotifications == true then
+                        game:GetService("StarterGui"):SetCore("SendNotification",{
+                            Title = "Exunys Developer";
+                            Text = "Tracers will be now coming from the bottom of your screen (Mode 1)";
+                            Duration = 5;
+                        })
+                    end
+                elseif _G.FromMouse == false and _G.FromCenter == false and _G.FromBottom == true and _G.TracersVisible == true then
+                    _G.FromCenter = true
+                    _G.FromBottom = false
+                    _G.FromMouse = false
+        
+                    if _G.SendNotifications == true then
+                        game:GetService("StarterGui"):SetCore("SendNotification",{
+                            Title = "Exunys Developer";
+                            Text = "Tracers will be now coming from the center of your screen (Mode 2)";
+                            Duration = 5;
+                        })
+                    end
+                elseif _G.FromMouse == false and _G.FromCenter == true and _G.FromBottom == false and _G.TracersVisible == true then
+                    _G.FromCenter = false
+                    _G.FromBottom = false
+                    _G.FromMouse = true
+        
+                    if _G.SendNotifications == true then
+                        game:GetService("StarterGui"):SetCore("SendNotification",{
+                            Title = "Exunys Developer";
+                            Text = "Tracers will be now coming from the position of your mouse cursor on your screen (Mode 3)";
+                            Duration = 5;
+                        })
+                    end
+                end
+            elseif Input.KeyCode == _G.DisableKey and Typing == false then
+                _G.TracersVisible = not _G.TracersVisible
+                
+                if _G.SendNotifications == true then
+                    game:GetService("StarterGui"):SetCore("SendNotification",{
+                        Title = "Exunys Developer";
+                        Text = "The tracers' visibility is now set to "..tostring(_G.TracersVisible)..".";
+                        Duration = 5;
+                    })
+                end
+            end
+        end)
+        
+        if _G.DefaultSettings == true then
+            _G.TeamCheck = false
+            _G.FromMouse = false
+            _G.FromCenter = false
+            _G.FromBottom = true
+            _G.TracersVisible = true
+            _G.TracerColor = Color3.fromRGB(40, 90, 255)
+            _G.TracerThickness = 1
+            _G.TracerTransparency = 0.5
+            _G.ModeSkipKey = Enum.KeyCode.E
+            _G.DisableKey = Enum.KeyCode.Q
+        end
+        
+        local Success, Errored = pcall(function()
+            CreateTracers()
+        end)
+        
+        if Success and not Errored then
+            if _G.SendNotifications == true then
+                game:GetService("StarterGui"):SetCore("SendNotification",{
+                    Title = "Exunys Developer";
+                    Text = "Tracer script has successfully loaded.";
+                    Duration = 5;
+                })
+            end
+        elseif Errored and not Success then
+            if _G.SendNotifications == true then
+                game:GetService("StarterGui"):SetCore("SendNotification",{
+                    Title = "Exunys Developer";
+                    Text = "Tracer script has errored while loading, please check the developer console! (F9)";
+                    Duration = 5;
+                })
+            end
+            TestService:Message("The tracer script has errored, please notify Exunys with the following information :")
+            warn(Errored)
+            print("!! IF THE ERROR IS A FALSE POSITIVE (says that a player cannot be found) THEN DO NOT BOTHER !!")
+        end
+        
+            _G.HeadSize = 30
+        
+            _G.Disabled = true
+        
+        
+        game:GetService('RunService').RenderStepped:connect(function()
+                if _G.Disabled then
+                    for i,v in next, game:GetService('Players'):GetPlayers() do
+                        if v.Name ~= game:GetService('Players').LocalPlayer.Name then
+                            pcall(function()
+                                v.Character.HumanoidRootPart.Size = Vector3.new(_G.HeadSize,_G.HeadSize,_G.HeadSize)
+                                v.Character.HumanoidRootPart.Transparency = 0.8
+                                v.Character.HumanoidRootPart.BrickColor = BrickColor.new("Really black")
+                                v.Character.HumanoidRootPart.Material = "Neon"
+                                v.Character.HumanoidRootPart.CanCollide = false
+                            end)
+                        end
+                    end
+                end
+            end)
+        end)
+    end
 })
 local Tab = Window:MakeTab({
 	Name = "Games 2",
