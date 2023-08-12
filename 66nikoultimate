@@ -178,6 +178,12 @@ Tab:AddButton({
         end)
   	end    
 })
+Tab:AddButton({
+	Name = "FE Crawl",
+	Callback = function()
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/0Ben1/fe/main/obf_vZDX8j5ggfAf58QhdJ59BVEmF6nmZgq4Mcjt2l8wn16CiStIW2P6EkNc605qv9K4.lua.txt'))()
+  	end    
+})
 
 local Section = Tab:AddSection({
 	Name = "Might be useful"
