@@ -57,19 +57,6 @@ Tab:AddSlider({
 		game.Players.LocalPlayer.Character.Humanoid.JumpPower = Value
 	end    
 })
-Tab:AddButton({
-	Name = "Reset Walkspeed",
-	Callback = function()
-        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 16
-  	end    
-})
-
-Tab:AddButton({
-	Name = "Reset Jumppower",
-	Callback = function()
-        game.Players.LocalPlayer.Character.Humanoid.JumpPower = 50
-  	end    
-})
 
 Tab:AddButton({
 	Name = "Infinite Jump (Click again to disable)",
