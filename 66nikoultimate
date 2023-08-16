@@ -21,7 +21,7 @@ local Section = Tab:AddSection({
 	Name = "Credits"
 })
 Tab:AddParagraph("Credits","Made by 66niko (niko.xd#6000)")
-Tab:AddParagraph("Scripts","Thanks to robloxscripts.com")
+Tab:AddParagraph("Scripts","robloxscripts.com")
 
 local Tab = Window:MakeTab({
 	Name = "Player",
